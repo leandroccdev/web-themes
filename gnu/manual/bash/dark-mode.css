@@ -1,0 +1,129 @@
+/* Dark Mode para Bash Reference Manual */
+/* Optimizado basándose en el esquema de colores proporcionado */
+
+:root {
+    --bg-dark: #222222;
+    --bg-pre: #3f3f3f;
+    --text-main: #cdcdcd;
+    --text-muted: #a0a0a0;
+    --accent-yellow: #ffd966;
+    --accent-blue: #3d85c6;
+    --accent-green: #6aa84f;
+    --accent-orange: #e69138;
+    --accent-brown: #b45f06;
+    --border-color: #444;
+}
+
+/* Configuración Global */
+html, body {
+    background-color: var(--bg-dark) !important;
+    color: var(--text-main) !important;
+    font-size: 20px !important;
+    line-height: 1.4em !important;
+    text-align: justify !important;
+}
+
+body {
+    max-width: 55em !important;
+    margin: 0 auto 2em !important;
+    padding: 1em 2.5em !important;
+    border: none !important;
+}
+
+/* Títulos y Secciones */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--text-main) !important;
+    border-bottom: 1px solid var(--border-color) !important;
+    padding-bottom: 0.2em;
+}
+
+/* Enlaces */
+a[href] {
+    color: var(--accent-yellow) !important;
+    text-decoration: none !important;
+}
+
+a[href]:hover {
+    text-decoration: underline !important;
+    filter: brightness(1.2);
+}
+
+/* Bloques de Código y Ejemplos */
+pre.example, pre.smallexample, div.example pre {
+    background: var(--bg-pre) !important;
+    color: #d6d6d6 !important;
+    padding: 1em !important;
+    border-radius: 4px !important;
+    border: 1px solid var(--border-color) !important;
+    overflow-x: auto !important;
+}
+
+/* Semántica de Variables y Código Inline */
+var.var, code > var.var, p > var.var {
+    color: var(--accent-blue) !important;
+    font-style: italic !important;
+}
+
+/* Código en párrafos */
+p > code.code {
+    color: var(--accent-brown) !important;
+    font-weight: 400 !important;
+    background: rgba(255, 255, 255, 0.05) !important;
+    padding: 1px 4px !important;
+    border-radius: 3px !important;
+}
+
+/* Código que sigue a un ejemplo (definiciones) */
+div.example + p > code.code {
+    color: var(--accent-green) !important;
+}
+
+/* Definiciones Técnicas */
+p > em.dfn {
+    color: var(--accent-orange) !important;
+    font-style: normal !important;
+    font-weight: 500 !important;
+}
+
+/* Opciones, Comandos y Teclas */
+samp.option, samp.command, kbd {
+    color: #8fbc8f !important; /* Sea green suave para no saturar */
+    font-family: monospace !important;
+}
+
+/* Tablas e Índices */
+table, th, td {
+    background-color: var(--bg-dark) !important;
+    border-color: var(--border-color) !important;
+    color: var(--text-main) !important;
+}
+
+th {
+    background-color: #2d2d2d !important;
+    padding: 0.5em !important;
+}
+
+/* Navegación (Header de GNU Texinfo) */
+.header, .node {
+    background: #2b2b2b !important;
+    color: var(--text-muted) !important;
+    padding: 0.5em !important;
+    font-size: 0.85em !important;
+    border-bottom: 1px solid var(--border-color) !important;
+}
+
+.header a {
+    color: var(--accent-blue) !important;
+}
+
+/* Ajustes de espaciado */
+dt {
+    color: var(--accent-yellow) !important;
+    font-weight: bold !important;
+    margin-top: 1em !important;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid var(--border-color) !important;
+}
